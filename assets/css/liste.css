@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../img/wallpaperbetter.com_1920x1080.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Caveat', cursive;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #1a3c40;
+}
+
+.letter {
+    background-color: #fff;
+    width: 100%;
+    max-width: 850px;
+    padding: 40px;
+    position: relative;
+    border: 12px solid #2d5a5e; /* Bordure Bleu canard */
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    /* Motif flocons subtil */
+    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* --- EN-TÊTE --- */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.header h1 {
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 3.5em;
+    color: #1a3c40;
+    margin: 0;
+}
+
+.header-deco {
+    width: 40px;
+    height: auto;
+}
+
+.header-deco-small {
+    width: 25px;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* --- CHAMPS ARRONDIS (BEIGES) --- */
+.input-rounded {
+    background-color: #f2e8d5; /* Beige */
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    padding: 0 10px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2em;
+    color: #2c3e50;
+    min-width: 150px;
+    outline: none;
+    margin: 0 5px;
+}
+
+.input-small {
+    min-width: 60px;
+    width: 70px;
+    text-align: center;
+}
+
+/* --- TEXTE INFO --- */
+.personal-info {
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sentence {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.inline-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+/* --- LIGNE DE DÉCORATION --- */
+.decorations-row {
+    text-align: center;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.decorations-row img {
+    height: 32px;
+    width: auto;
+}
+
+.intro-text {
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Caveat', cursive;
+}
+
+/* --- STRUCTURE PRINCIPALE --- */
+.main-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* Blocs beiges (Cards) */
+.card {
+    background-color: #f7f0e3; /* Fond beige des blocs */
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Colonne Gauche */
+.left-card {
+    flex: 1;
+}
+
+.left-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #1a3c40;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-title {
+    width: 30px;
+    height: auto;
+}
+
+.gift-list {
+    list-style: none;
+}
+
+.gift-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 1.3em;
+}
+
+.gift-bullet {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Lignes pointillées */
+.input-line {
+    background: transparent;
+    border: none;
+    border-bottom: 2px dashed #ceaba0;
+    flex: 1;
+    margin-left: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 1em;
+    outline: none;
+}
+
+/* Colonne Droite */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.special-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 150px;
+}
+
+.special-box p {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.input-textarea {
+    width: 100%;
+    flex: 1;
+    background: transparent;
+    border: none;
+    resize: none;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3em;
+    outline: none;
+    line-height: 30px;
+    /* Effet lignes de cahier */
+    background-image: linear-gradient(transparent 28px, #ceaba0 29px, transparent 30px);
+    background-size: 100% 30px;
+    border-bottom: 2px dashed #ceaba0;
+}
+
+/* Icônes flottantes (étoile et coeur) */
+.box-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 15px; /* Décalé à droite pour ne pas gêner l'écriture */
+    width: 28px;
+    height: auto;
+    opacity: 0.8;
+}
+
+/* --- BAS DE PAGE --- */
+.bottom-section {
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+
+.signature-block {
+    margin-top: 15px;
+    text-align: right; /* Signature alignée à droite */
+}
+
+.bottom-decorations {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bottom-decorations img {
+    height: 40px;
+    width: auto;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .letter {
+        padding: 20px;
+        border-width: 8px;
+    }
+    
+    .header h1 {
+        font-size: 2.2em;
+    }
+    
+    .main-content {
+        flex-direction: column;
+    }
+}
