@@ -67,7 +67,7 @@ body {
     position: absolute;
     top: 10px;
     left: 20px;
-    height: 45px;
+    height: 60px;
     width: auto;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .header-right img { 
-    height: 35px; 
+    height: 50px; 
     margin-left: 5px; 
     vertical-align: middle;
 }
@@ -125,7 +125,7 @@ body {
 }
 
 .decorations-center img {
-    height: 35px;
+    height: 50px;
     margin: 0 20px; /* Espace entre les petites icônes */
     vertical-align: middle;
 }
