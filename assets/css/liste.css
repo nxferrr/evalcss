@@ -1,274 +1,321 @@
+/* --- RESET --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* --- BODY & FOND --- */
 body {
+    /* Image de fond en bois */
     background-image: url('../img/wallpaperbetter.com_1920x1080.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
+    /* Police par défaut */
     font-family: 'Caveat', cursive;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    color: #1a3c40;
+    padding: 40px 20px;
+    color: #1a3c40; /* Bleu pétrole foncé */
+    min-height: 100vh;
 }
 
+.letter-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- LA FEUILLE DE PAPIER --- */
 .letter {
     background-color: #fff;
-    width: 100%;
-    max-width: 850px;
-    padding: 40px;
+    width: 95%;
+    max-width: 950px;
     position: relative;
-    border: 12px solid #2d5a5e; /* Bordure Bleu canard */
-    border-radius: 4px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    /* Motif flocons subtil */
-    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+    /* Bordure épaisse bleu canard */
+    border: 12px solid #2d5a5e;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    /* Padding (Espace intérieur) - Grand en bas pour les décos */
+    padding: 30px 50px 110px 50px;
+    
+    /* Fond à petits points (Bullet Journal style) */
+    background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
     background-size: 20px 20px;
 }
 
-/* --- EN-TÊTE --- */
+/* --- EN-TÊTE (HEADER) --- */
 .header {
     text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+    position: relative;
+    margin-bottom: 25px;
+    padding: 0 50px; /* Pour laisser place aux images sur les côtés */
 }
 
 .header h1 {
     font-family: 'Mountains of Christmas', cursive;
-    font-size: 3.5em;
+    font-size: 4.2em;
     color: #1a3c40;
-    margin: 0;
+    line-height: 1.1;
+    display: inline-block;
 }
 
-.header-deco {
-    width: 40px;
-    height: auto;
-}
-
-.header-deco-small {
-    width: 25px;
-    height: auto;
-    margin-right: 5px;
-}
-
-/* --- CHAMPS ARRONDIS (BEIGES) --- */
-.input-rounded {
-    background-color: #f2e8d5; /* Beige */
-    border: none;
-    border-radius: 15px;
-    height: 35px;
-    padding: 0 10px;
-    font-family: 'Caveat', cursive;
-    font-size: 1.2em;
-    color: #2c3e50;
-    min-width: 150px;
-    outline: none;
-    margin: 0 5px;
-}
-
-.input-small {
-    min-width: 60px;
-    width: 70px;
-    text-align: center;
-}
-
-/* --- TEXTE INFO --- */
-.personal-info {
-    font-size: 1.5em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.sentence {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.inline-icon {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin: 0 5px;
-}
-
-/* --- LIGNE DE DÉCORATION --- */
-.decorations-row {
-    text-align: center;
-    margin: 15px 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.decorations-row img {
-    height: 32px;
+/* Images du header positionnées en absolu pour ne pas gêner le centrage */
+.deco-corner-left {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    height: 45px;
     width: auto;
 }
 
-.intro-text {
-    font-size: 1.6em;
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: 'Caveat', cursive;
+.header-right {
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
-/* --- STRUCTURE PRINCIPALE --- */
+.header-right img { 
+    height: 35px; 
+    margin-left: 5px; 
+    vertical-align: middle;
+}
+
+/* --- INFOS PERSONNELLES (Centrées) --- */
+.personal-info {
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 2.2;
+    margin-bottom: 20px;
+}
+
+.line {
+    margin-bottom: 5px;
+}
+
+/* Style des champs (Inputs) Beiges */
+.input-beige {
+    background-color: #f2e8d5; /* Beige */
+    border: none;
+    border-radius: 15px;
+    height: 38px;
+    padding: 0 15px;
+    font-family: 'Caveat', cursive;
+    font-size: 0.9em;
+    color: #5d4037;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 6px;
+    text-align: center; /* Texte centré dans le champ */
+}
+
+.icon-inline {
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* --- DÉCORATIONS MILIEU --- */
+.decorations-center {
+    text-align: center;
+    margin: 10px 0 25px 0;
+}
+
+.decorations-center img {
+    height: 35px;
+    margin: 0 20px; /* Espace entre les petites icônes */
+    vertical-align: middle;
+}
+
+.intro-text {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* --- CONTENU PRINCIPAL (LES 2 COLONNES) --- */
 .main-content {
     display: flex;
-    gap: 20px;
-}
-
-/* Blocs beiges (Cards) */
-.card {
-    background-color: #f7f0e3; /* Fond beige des blocs */
-    border-radius: 15px;
-    padding: 20px;
-}
-
-/* Colonne Gauche */
-.left-card {
-    flex: 1;
-}
-
-.left-card h2 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #1a3c40;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.icon-title {
-    width: 30px;
-    height: auto;
-}
-
-.gift-list {
-    list-style: none;
-}
-
-.gift-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-    font-size: 1.3em;
-}
-
-.gift-bullet {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-/* Lignes pointillées */
-.input-line {
-    background: transparent;
-    border: none;
-    border-bottom: 2px dashed #ceaba0;
-    flex: 1;
-    margin-left: 5px;
-    font-family: 'Caveat', cursive;
-    font-size: 1em;
-    outline: none;
-}
-
-/* Colonne Droite */
-.right-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.special-box {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    min-height: 150px;
-}
-
-.special-box p {
-    font-size: 1.4em;
+    gap: 30px;
+    align-items: stretch; /* Hauteur égale */
     margin-bottom: 10px;
 }
 
-.input-textarea {
+/* CARTE GAUCHE (Ma Liste) */
+.card {
+    background-color: #f7f0e3; /* Beige clair */
+    border-radius: 18px;
+    padding: 25px;
+}
+
+.card-left {
+    flex: 1.2; /* Un peu plus large que la droite */
+    display: flex;
+    flex-direction: column;
+    min-height: 600px; /* Hauteur minimale pour rendre la colonne plus longue */
+}
+
+/* Titre "Ma liste" corrigé (Police Manuscrite) */
+.card h2 {
+    font-family: 'Caveat', cursive; /* Correction Police */
+    font-size: 2em;
+    color: #1a3c40;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+}
+
+.icon-title { width: 32px; }
+
+.gift-list {
+    list-style: none;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alignement en haut */
+    gap: 12px; /* Espacement régulier entre les éléments */
+}
+
+.gift-list li {
+    font-size: 1.4em;
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-end; /* Aligne le texte sur la ligne */
+}
+
+.bullet { 
+    width: 22px; 
+    margin-right: 12px; 
+    margin-bottom: 5px;
+}
+
+/* Input ligne PLEINE (Solid) */
+.dotted-input {
+    background: transparent;
+    border: none;
+    /* CORRECTION : Ligne pleine fine et douce */
+    border-bottom: 1px solid #d4b5aa; 
+    flex: 1;
+    font-family: inherit;
+    font-size: 1em;
+    color: #5d4037;
+    outline: none;
+    padding-bottom: 2px;
+}
+
+/* COLONNE DROITE */
+.column-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card-special {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Partage la hauteur */
+}
+
+/* Titre des boites de droite corrigé */
+.card-intro {
+    font-family: 'Caveat', cursive; /* Correction Police */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    color: #1a3c40;
+    font-weight: 700;
+}
+
+.icon-small { 
+    height: 22px; 
+    vertical-align: middle; 
+    margin: 0 3px; 
+}
+
+/* Textarea avec lignes PLEINES (Cahier) */
+.lines-textarea {
     width: 100%;
     flex: 1;
     background: transparent;
     border: none;
-    resize: none;
-    font-family: 'Caveat', cursive;
+    font-family: inherit;
     font-size: 1.3em;
+    line-height: 35px; /* Doit correspondre à la taille du dégradé */
+    resize: none;
     outline: none;
-    line-height: 30px;
-    /* Effet lignes de cahier */
-    background-image: linear-gradient(transparent 28px, #ceaba0 29px, transparent 30px);
-    background-size: 100% 30px;
-    border-bottom: 2px dashed #ceaba0;
+    /* Création des lignes pleines */
+    background-image: linear-gradient(transparent 34px, #d4b5aa 34px, transparent 35px);
+    background-size: 100% 35px;
+    /* Ligne du bas */
+    border-bottom: 1px solid #d4b5aa;
+    padding-top: 5px;
 }
 
-/* Icônes flottantes (étoile et coeur) */
-.box-icon {
+.floating-icon {
     position: absolute;
-    bottom: 10px;
-    right: 15px; /* Décalé à droite pour ne pas gêner l'écriture */
-    width: 28px;
-    height: auto;
-    opacity: 0.8;
+    bottom: 12px;
+    right: 12px;
+    width: 26px;
+    opacity: 0.9;
 }
 
 /* --- BAS DE PAGE --- */
 .bottom-section {
-    margin-top: 30px;
-    font-size: 1.5em;
+    text-align: left; /* Aligné à gauche dans la colonne */
+    font-size: 1.6em;
+    line-height: 2.2;
+    margin-top: 25px;
+    padding-top: 20px;
 }
 
-.signature-block {
-    margin-top: 15px;
-    text-align: right; /* Signature alignée à droite */
+.signature-wrapper {
+    text-align: right; /* Aligne la signature à droite */
+    margin-top: 20px;
+    padding-right: 40px; /* Marge pour ne pas coller au bord */
 }
 
-.bottom-decorations {
-    margin-top: 30px;
+/* --- DÉCORATIONS BAS DE PAGE --- */
+.footer-decorations {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-end;
-    gap: 20px;
-    flex-wrap: wrap;
+    padding-bottom: 15px;
+    pointer-events: none; /* Laisse cliquer à travers si besoin */
 }
 
-.bottom-decorations img {
-    height: 40px;
-    width: auto;
+.footer-decorations img {
+    height: 80px; /* Taille des images */
+    filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.15));
 }
 
-/* Responsive pour mobile */
-@media (max-width: 768px) {
-    .letter {
-        padding: 20px;
-        border-width: 8px;
-    }
+/* Rotations pour effet naturel */
+.d-santa { transform: rotate(-10deg); }
+.d-gift { transform: rotate(-5deg) scale(0.9); }
+.d-candy { transform: rotate(5deg); }
+.d-sock { transform: rotate(10deg); }
+.d-tree { transform: rotate(5deg); }
+
+/* --- RESPONSIVE (MOBILE) --- */
+@media (max-width: 800px) {
+    .main-content { flex-direction: column; }
+    .header h1 { font-size: 3em; }
+    .letter { padding: 20px 20px 80px 20px; }
     
-    .header h1 {
-        font-size: 2.2em;
-    }
+    .input-beige { width: 100% !important; margin: 5px 0; }
     
-    .main-content {
-        flex-direction: column;
-    }
+    .signature-wrapper { text-align: center; padding-right: 0; }
+    
+    /* Sur mobile, on donne une hauteur fixe aux zones de texte */
+    .lines-textarea { height: 140px; flex: auto; }
 }
